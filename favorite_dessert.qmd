@@ -17,5 +17,5 @@ fav_dessert <- read_csv(here("favorite_desserts.csv"))
 
 ```{r}
 webpage %>% 
-  filter(str_detect(fav_dessert[2,3], "ruit") %in% dessert)
+  filter(dessert %in% str_detect(fav_dessert[2,3], "ruit"))
 ```
