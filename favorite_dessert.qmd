@@ -1,0 +1,21 @@
+---
+title: "Dessert Lookup Comparison"
+format: html
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+library(rvest)
+library(here)
+
+# read the webpage code
+webpage <- read_csv("https://raw.githubusercontent.com/brunj7/EDS-214-analytical-workflows/main/data/iconic_desserts.csv")
+
+fav_dessert <- read_csv(here("favorite_desserts.csv"))
+```
+
+```{r}
+webpage %>% 
+  filter(str_detect(fav_dessert[2,3], "ruit") %in% dessert)
+```
