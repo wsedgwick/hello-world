@@ -12,10 +12,18 @@ library(here)
 # read the webpage code
 webpage <- read_csv("https://raw.githubusercontent.com/brunj7/EDS-214-analytical-workflows/main/data/iconic_desserts.csv")
 
+<<<<<<< HEAD
 favorite_dessert <- read_csv(here("favorite_desserts.csv"))
+=======
+my_fav_dessert <- read_csv(here("favorite_desserts.csv"))
+>>>>>>> d20ca0b1f58eedce8a736c80a8df2650e2ad89b3
 ```
 
 ```{r}
 webpage %>% 
+<<<<<<< HEAD
   filter(dessert %in% str_detect(favorite_dessert[2,3], "ruit"))
+=======
+  filter(dessert %in% str_detect(my_fav_dessert[2,3], "ruit"))
+>>>>>>> d20ca0b1f58eedce8a736c80a8df2650e2ad89b3
 ```
