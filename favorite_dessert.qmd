@@ -12,10 +12,10 @@ library(here)
 # read the webpage code
 webpage <- read_csv("https://raw.githubusercontent.com/brunj7/EDS-214-analytical-workflows/main/data/iconic_desserts.csv")
 
-fav_dessert <- read_csv(here("favorite_desserts.csv"))
+my_fav_dessert <- read_csv(here("favorite_desserts.csv"))
 ```
 
 ```{r}
 webpage %>% 
-  filter(dessert %in% str_detect(fav_dessert[2,3], "ruit"))
+  filter(dessert %in% str_detect(my_fav_dessert[2,3], "ruit"))
 ```
